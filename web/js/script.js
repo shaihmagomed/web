@@ -1,8 +1,4 @@
-/**
- * Главный JavaScript для сайта
- */
 
-// 1. Кнопка "Наверх"
 const backToTopBtn = document.getElementById('backToTop');
 if (backToTopBtn) {
     window.addEventListener('scroll', () => {
@@ -11,7 +7,7 @@ if (backToTopBtn) {
     backToTopBtn.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
 }
 
-// 2. Форма обратной связи
+
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
@@ -24,9 +20,9 @@ if (contactForm) {
             alert('Заполните все поля!');
             return;
         }
-        // Для учебного проекта достаточно
+        
 if (email.includes('@') && email.includes('.')) {
-    // Принимаем
+   
 }
         
         alert('Спасибо! Мы свяжемся с вами. 🐾');
@@ -34,7 +30,7 @@ if (email.includes('@') && email.includes('.')) {
     });
 }
 
-// 3. Увеличение фотографий
+
 function initImageZoom() {
     document.querySelectorAll('.gallery-item img, .breed-card img, .nav-card img').forEach(img => {
         img.style.cursor = 'zoom-in';
@@ -55,7 +51,7 @@ function initImageZoom() {
     });
 }
 
-// 4. Анимации при прокрутке
+
 function initScrollAnimations() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -74,8 +70,9 @@ function initScrollAnimations() {
     });
 }
 
-// 5. Инициализация при загрузке
+
 document.addEventListener('DOMContentLoaded', () => {
     initImageZoom();
     initScrollAnimations();
+
 });
