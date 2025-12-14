@@ -1,0 +1,40 @@
+/* Главная страница */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { background: #f0f8ff; color: #333; line-height: 1.6; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+
+header { background: #FF6B6B; color: white; padding: 2rem 0; text-align: center; }
+header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+
+/* Навигация */
+nav { background: #4ECDC4; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+nav ul { display: flex; justify-content: center; list-style: none; flex-wrap: wrap; }
+nav li { margin: 0 1rem; }
+nav a { color: white; text-decoration: none; padding: 0.5rem 1.5rem; border-radius: 20px; }
+nav a:hover, nav a.active { background: white; color: #4ECDC4; }
+
+/* Контент главной */
+.welcome-section { text-align: center; padding: 3rem 0; }
+.welcome-content h2 { color: #FF6B6B; margin-bottom: 1rem; }
+
+.nav-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin: 3rem 0; }
+.nav-card { background: white; border-radius: 10px; padding: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.1); width: 300px; text-align: center; }
+.nav-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 1rem; }
+
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; margin: 3rem 0; }
+.info-block { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; margin: 2rem 0; }
+.gallery-item img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; }
+
+.btn { display: inline-block; background: #FF6B6B; color: white; padding: 0.8rem 1.5rem; border-radius: 25px; text-decoration: none; margin-top: 1rem; }
+.btn-outline { background: transparent; color: #FF6B6B; background: #FF6B6B; color: white; border: 2px solid #FF6B6B; padding: 0.8rem 1.5rem; border-radius: 25px; text-decoration: none; }
+
+footer { background: #2C3E50; color: white; text-align: center; padding: 2rem 0; margin-top: 3rem; }
+
+@media (max-width: 768px) {
+    nav ul { flex-direction: column; align-items: center; }
+    nav li { margin: 0.3rem 0; width: 100%; text-align: center; }
+    .info-grid { grid-template-columns: 1fr; }
+    .nav-card { width: 100%; max-width: 400px; }
+}

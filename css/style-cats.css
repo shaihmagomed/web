@@ -1,0 +1,38 @@
+/* Страница кошек */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { background: #fff0f5; color: #333; line-height: 1.6; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+
+header { background: #FFB6C1; color: white; padding: 2rem 0; text-align: center; }
+header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+
+/* Навигация */
+nav { background: #FF6B6B; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+nav ul { display: flex; justify-content: center; list-style: none; flex-wrap: wrap; }
+nav li { margin: 0 1rem; }
+nav a { color: white; text-decoration: none; padding: 0.5rem 1.5rem; border-radius: 20px; }
+nav a:hover, nav a.active { background: white; color: #FF6B6B; }
+
+/* Контент кошек */
+.section-title { text-align: center; color: #FF6B6B; margin: 2rem 0; font-size: 2rem; }
+
+.facts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+.fact-item { background: #FFB6C1; color: white; padding: 1.5rem; border-radius: 10px; }
+
+.breeds-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0; }
+.breed-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.breed-card img { width: 100%; height: 200px; object-fit: cover; }
+.breed-info { padding: 1.5rem; }
+
+.tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+.tip-card { background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+.btn { display: inline-block; background: #FF6B6B; color: white; padding: 0.8rem 1.5rem; border-radius: 25px; text-decoration: none; }
+
+footer { background: #2C3E50; color: white; text-align: center; padding: 2rem 0; margin-top: 3rem; }
+
+@media (max-width: 768px) {
+    nav ul { flex-direction: column; align-items: center; }
+    nav li { margin: 0.3rem 0; width: 100%; text-align: center; }
+    .breeds-grid { grid-template-columns: 1fr; }
+}
